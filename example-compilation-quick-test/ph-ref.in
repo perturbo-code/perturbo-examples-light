@@ -1,0 +1,16 @@
+Phonons on a uniform grid
+&inputph
+  verbosity='debug'
+  tr2_ph=1.0d-17
+  prefix='si'
+  ldisp=.true.
+  epsil=.true.
+  lqdir=.true.
+  outdir='./tmp'
+  fildyn  = 'si.dyn.xml'
+  fildvscf = 'dvscf'
+  nq1=2, nq2=2, nq3=2,
+  !nk1=20, nk2=20, nk3=20
+  start_q=1
+  last_q=1
+/

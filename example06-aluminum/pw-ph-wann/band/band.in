@@ -1,0 +1,36 @@
+&control
+   calculation='bands'
+   restart_mode='from_scratch',
+   prefix='al',
+   pseudo_dir = '../pseudo',
+   outdir='./tmp'
+/
+&system
+   ibrav=  2, celldm(1) =7.65, nat= 1, ntyp= 1,
+   ecutwfc =40.0,
+   occupations='smearing',
+   smearing='marzari-vanderbilt', 
+   degauss=0.05,
+   nbnd = 8
+/
+&electrons
+   conv_thr =  1.0d-12
+   mixing_beta = 0.7
+/
+&bands
+  prefix  = 'al'
+  outdir='./tmp'
+  filband = 'bands'
+/
+ATOMIC_SPECIES
+ Al  26.98 Al_DOJO_LDA.upf
+ATOMIC_POSITIONS alat
+ Al 0.00 0.00 0.00
+K_POINTS crystal_b
+6
+0.500 0.500 0.500  50
+0.000 0.000 0.000  50
+0.500 0.000 0.500  20
+0.500 0.250 0.750  20
+0.375 0.375 0.750  50
+0.000 0.000 0.000  1

@@ -1,0 +1,16 @@
+Phonons on a uniform grid
+&inputph
+  tr2_ph=1.0d-14
+  prefix='gaas'
+  ldisp=.true.
+  epsil=.true.
+  lqdir = .true.
+  outdir='./tmp'
+  fildyn  = 'gaas.dyn.xml'
+  fildvscf = 'dvscf'
+  nq1=8, nq2=8, nq3=8,
+  nk1=16, nk2=16, nk3=16
+  start_q = 1
+  last_q = 1
+  max_seconds=41400.0
+/

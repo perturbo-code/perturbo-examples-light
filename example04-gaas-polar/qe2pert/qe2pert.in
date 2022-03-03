@@ -1,0 +1,11 @@
+qe2pert
+&qe2pert
+  prefix='gaas'
+  outdir='./tmp'
+  phdir='../pw-ph-wann/phonon-k242424/References/save'
+  nk1=8, nk2=8, nk3=8
+  dft_band_min = 1
+  dft_band_max = 24
+  num_wann = 8
+  lwannier = .true.
+/

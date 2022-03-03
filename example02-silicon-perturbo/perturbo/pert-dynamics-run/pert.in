@@ -1,0 +1,28 @@
+&perturbo
+ prefix      = 'si'
+ calc_mode   = 'dynamics-run'
+
+ boltz_kdim(1) = 80 
+ boltz_kdim(2) = 80 
+ boltz_kdim(3) = 80
+
+ boltz_emin = 6.4
+ boltz_emax = 7.4
+ band_min = 5
+ band_max = 6
+ 
+ ftemper  = 'si.temper'
+
+ time_step   = 1 ! fs
+ boltz_nstep = 50 
+ output_nstep = 2
+ solver = 'euler'  
+
+ boltz_init_dist = 'gaussian'
+ boltz_init_e0 = 7.0 ! eV
+ boltz_init_smear = 40 !meV
+
+ tmp_dir = "./tmp"
+ phfreq_cutoff = 1 ! meV
+ delta_smear = 8 ! meV
+/

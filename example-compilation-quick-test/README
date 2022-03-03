@@ -1,0 +1,14 @@
+We use a 4x4x4 k-qrid for the nscf and a 2x2x2 q-grid for phonon.  
+
+
+Use the input files in the example01:
+replace: 
+* nscf.in in the nscf directory
+* ph-ref.in in the phonon directory
+* si.win in the wann directory 
+* qe2pert.in in the qe2pert directory 
+
+Run qe2pert to obtain your own si_epwan.h5 and then run `ephmat` using the input files example02 for perturbo
+
+
+Here we provide the ephmat computed from our cluster; we also provide our own si_epwan.h5 for reference.

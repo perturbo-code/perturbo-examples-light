@@ -1,0 +1,15 @@
+Phonons on a uniform grid
+&inputph
+  verbosity='debug'
+  tr2_ph=1.0d-17
+  prefix='graphene'
+  ldisp=.true.
+  lqdir = .true.
+  outdir='./tmp'
+  fildyn  = 'graphene.dyn.xml'
+  fildvscf = 'dvscf'
+  nq1=18, nq2=18, nq3=1,
+  !nk1=60, nk2=60, nk3=1
+  start_q = 1
+  last_q = 1
+/

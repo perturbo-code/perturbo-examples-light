@@ -1,0 +1,82 @@
+#!/bin/bash
+#PBS -N pert-ph
+#PBS -j oe 
+#PBS -l walltime=01:00:00
+#PBS -l nodes=1:ppn=20
+#PBS -q debugQ
+#PBS -V
+
+export PATH=/home/timescale/Jinjian/libraries/gcc6/bin:$PATH
+export LD_LIBRARY_PATH=/home/timescale/Jinjian/libraries/gcc6/lib64:$LD_LIBRARY_PATH
+export PATH=/home/timescale/Jinjian/libraries/openmpi-2.1.0-gcc6/bin:$PATH
+export LD_LIBRARY_PATH=/home/timescale/Jinjian/libraries/openmpi-2.1.0-gcc6/lib:$LD_LIBRARY_PATH
+export PATH=/home/timescale/Jinjian/libraries/hdf5-1.8.18-gcc6/bin:$PATH
+export LD_LIBRARY_PATH=/home/timescale/Jinjian/libraries/hdf5-1.8.18-gcc6/lib:$LD_LIBRARY_PATH
+
+#define executable file
+PW=/home/ilu/IMPORTANT/q-e/bin/pw.x
+PH=/home/ilu/IMPORTANT/q-e/bin/ph.x
+
+#control tags
+sw='restart'  #'restart'
+end='' #'clear'
+
+cd $PBS_O_WORKDIR
+cp $PBS_NODEFILE ./hosts_${PBS_JOBID}
+NP=`cat $PBS_NODEFILE | wc -l`
+Nodes=`cat $PBS_NODEFILE | uniq`
+NN=`cat $PBS_NODEFILE | uniq | wc -l`
+
+SCRDIR="/scratch/$USER/tmp_${PBS_JOBID}"
+echo "$SCRDIR"
+
+#create scratch dir
+for i in $Nodes
+do 
+   ssh $i mkdir -p $SCRDIR
+done
+
+if [ -d "$PBS_O_WORKDIR/../tmp" ]; then
+  ssh `head $PBS_NODEFILE -n 1` "cp -r $PBS_O_WORKDIR/../tmp/*.save $SCRDIR/"
+else
+  echo "ERROR: No tmp directory!"
+  exit
+fi
+
+#run jobs
+#-------------------------------------------------------------
+echo Job starts at `date`
+#-------------------------------------------------------------
+
+NQ= 
+PREFIX=gaas
+CASE=ph
+sed -i  "s|.*outdir.*| outdir='${SCRDIR}'|g"  ${CASE}.in
+mpirun -np $NP $PH -npools $NP  < ${CASE}.in  > ${CASE}.out
+
+#-------------------------------------------------------------
+echo Job ends at `date`
+#-------------------------------------------------------------
+
+#transfer data to login nodes if needed, and clear scratch dir
+if [ "$sw" == "restart" ]; then
+     mkdir -p ./tmp
+     mkdir -p ./tmp/_ph0
+     mkdir -p ./tmp/_ph0/${PREFIX}.q_${NQ}
+     ssh `head $PBS_NODEFILE -n 1` "cp -r $SCRDIR/_ph0/*.phsave  $PBS_O_WORKDIR/tmp/_ph0/"
+     DPATH=${PREFIX}.q_${NQ}
+     ssh `head $PBS_NODEFILE -n 1` "cp -r $SCRDIR/_ph0/${DPATH}/*.dvscf1  $PBS_O_WORKDIR/tmp/_ph0/${PREFIX}.q_${NQ}/"
+fi
+
+if [ "$end" == 'clear' ]; then
+   for i in $Nodes
+   do 
+      ssh $i "rm -rf $SCRDIR"
+   done
+elif [ "$end" == 'collect_all' ]; then
+   for i in $Nodes
+   do 
+      ssh $i "cp -r $SCRDIR/*  $PBS_O_WORKDIR/tmp/"
+      ssh $i "rm -rf $SCRDIR"
+   done
+fi

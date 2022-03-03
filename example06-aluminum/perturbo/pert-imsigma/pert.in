@@ -1,0 +1,16 @@
+&perturbo
+  prefix      = 'al'
+  calc_mode   = 'imsigma'
+  
+  fklist   = 'al_tet.kpt'
+  ftemper  = 'al.temper'
+  
+  band_min = 1
+  band_max = 4
+
+  phfreq_cutoff = 0.625 ! meV
+  delta_smear = 10 ! meV
+
+  sampling = 'uniform'
+  nsamples = 1000000
+ /

@@ -1,0 +1,11 @@
+&perturbo
+  prefix = 'gaas'
+  calc_mode = 'ephmat'
+  fklist = 'eph.kpt'
+  fqlist = 'eph.qpt'
+
+  band_min = 5
+  band_max = 5
+
+  phfreq_cutoff = 1   !meV
+ /

@@ -1,0 +1,5 @@
+&perturbo
+  prefix = 'al'
+  calc_mode = 'phdisp'
+  fqlist = 'al_phdisp.qpt'
+ /

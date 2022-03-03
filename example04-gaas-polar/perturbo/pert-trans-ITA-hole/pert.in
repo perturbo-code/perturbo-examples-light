@@ -1,0 +1,19 @@
+&perturbo
+  prefix      = 'gaas'
+  calc_mode   = 'trans'
+  hole = .true.
+  
+  boltz_kdim(1) = 160
+  boltz_kdim(2) = 160
+  boltz_kdim(3) = 160
+  boltz_emin = 4.975  !VBM-200eV
+  boltz_emax = 5.575  !VBM=5.1753
+  band_min = 2, band_max = 4
+
+  ftemper = 'gaas.temper'
+  tmp_dir = './tmp'
+
+  boltz_nstep = 50
+  delta_smear = 8 !meV
+  phfreq_cutoff = 2 !meV
+ /

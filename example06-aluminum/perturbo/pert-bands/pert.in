@@ -1,0 +1,5 @@
+&perturbo
+  prefix      = 'al'
+  calc_mode   = 'bands'
+  fklist   = 'al_band.kpt'
+ /

@@ -1,0 +1,17 @@
+&perturbo
+ prefix      = 'graphene'
+ calc_mode   = 'meanfp'
+
+ band_min = 1
+ band_max = 1
+ 
+ ftemper  = 'graphene.temper'
+ fklist  = 'graphene_tet.kpt'
+
+ phfreq_cutoff = 0.625  !meV
+ delta_smear = 5        !meV
+
+ nsamples = 5000000
+ sampling = 'cauchy'
+ cauchy_scale = 0.035
+/

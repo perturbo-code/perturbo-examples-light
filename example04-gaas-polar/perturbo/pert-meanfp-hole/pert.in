@@ -1,0 +1,17 @@
+&perturbo
+  prefix      = 'gaas'
+  calc_mode   = 'meanfp'
+
+  phfreq_cutoff = 2 !meV
+  delta_smear   = 1 !meV
+  
+  band_min = 2
+  band_max = 4
+   
+  ftemper = 'gaas.temper'
+  fklist  = 'gaas_tet.kpt'
+
+  nsamples = 5000000
+  sampling = 'cauchy'
+  cauchy_scale = 0.035
+ /

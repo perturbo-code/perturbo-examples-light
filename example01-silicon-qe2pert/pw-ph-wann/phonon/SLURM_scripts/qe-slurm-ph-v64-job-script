@@ -1,0 +1,33 @@
+#!/bin/bash
+#SBATCH --nodes=1             # Number of Nodes
+#SBATCH --hint=nomultithread  # Disable hyperthreading
+#SBATCH -J ph-ref     # Jobname
+#SBATCH --output=%x.o%j       # Output file %x is the jobname, %j the jobid
+#SBATCH --error=%x.o%j        # Error file
+#SBATCH --time=10:00:00       # Expected runtime HH:MM:SS (max 100h)
+
+# Please specify some of the above variables by yourself according to your demand 
+
+# Cleans out the modules loaded in interactive and inherited by default
+module pure
+
+# Load the module
+module load quantum-espresso/6.4.1-mpi
+
+# Please modify the following number by yourself
+# according to your demand
+# Number of OpenMP threads
+numopenmp=2
+# Number of MPI tasks per node
+Nproc=20
+# Number of npools for ph.x
+npools=8
+
+export OMP_NUM_THREADS=$numopenmp
+
+# run the job
+echo Job starts at `date`
+
+srun -n $Nproc -c $numopenmp --cpu_bind=cores ph.x -npools $npools < ph.in >ph.out
+
+echo Job ends at `date`

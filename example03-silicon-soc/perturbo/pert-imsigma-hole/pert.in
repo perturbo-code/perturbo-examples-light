@@ -1,0 +1,16 @@
+&perturbo
+  prefix      = 'si'
+  calc_mode   = 'imsigma'
+  
+  fklist   = 'si_tet.kpt'
+  ftemper  = 'si.temper'
+  
+  band_min = 3
+  band_max = 8
+
+  phfreq_cutoff = 0.625 ! meV
+  delta_smear = 10 ! meV
+
+  sampling = 'uniform'
+  nsamples = 1000000
+ /

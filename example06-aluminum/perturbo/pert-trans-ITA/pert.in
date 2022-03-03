@@ -1,0 +1,20 @@
+&perturbo
+ prefix    = 'al'
+ calc_mode = 'trans'
+
+ boltz_kdim(1) = 80 
+ boltz_kdim(2) = 80 
+ boltz_kdim(3) = 80
+
+ boltz_emin = 7.4 ! Ef=7.5542
+ boltz_emax = 7.7
+ band_min = 1
+ band_max = 4
+ 
+ ftemper  = 'al.temper'  !optional
+
+ tmp_dir = './tmp'
+ boltz_nstep = 50  !max number of iterations
+ phfreq_cutoff = 0.625  !meV
+ delta_smear = 5       !meV
+/
