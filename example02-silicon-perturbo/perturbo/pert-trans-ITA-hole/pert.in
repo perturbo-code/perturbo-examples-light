@@ -1,6 +1,6 @@
 &perturbo
  prefix      = 'si'
- calc_mode   = 'trans'
+ calc_mode   = 'trans-ita'
  hole = .true.
 
  boltz_kdim(1) = 80 

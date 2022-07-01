@@ -1,6 +1,6 @@
 &perturbo
   prefix      = 'gaas'
-  calc_mode   = 'trans'
+  calc_mode   = 'trans-ita'
   
   boltz_kdim(1) = 160
   boltz_kdim(2) = 160

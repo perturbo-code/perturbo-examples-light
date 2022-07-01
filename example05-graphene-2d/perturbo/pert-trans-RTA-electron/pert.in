@@ -1,6 +1,6 @@
 &perturbo
  prefix      = 'graphene'
- calc_mode   = 'trans'
+ calc_mode   = 'trans-rta'
 
  boltz_kdim(1) = 1200 
  boltz_kdim(2) = 1200 
