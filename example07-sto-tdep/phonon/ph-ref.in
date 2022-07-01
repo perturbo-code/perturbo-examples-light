@@ -1,0 +1,15 @@
+Phonons on a uniform grid
+&inputph
+  tr2_ph=1.0d-14
+  prefix='sto-nosoc'
+  ldisp=.true.
+  epsil=.true.
+  lqdir = .true.
+  outdir='./tmp'
+  fildyn  = 'sto-nosoc.dyn.xml'
+  fildvscf = 'dvscf'
+  nq1=4, nq2=4, nq3=4,
+  nk1=10, nk2=10, nk3=10
+  start_q = 1
+  last_q = 1
+/
