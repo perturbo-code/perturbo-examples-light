@@ -10,7 +10,4 @@ Phonons on a uniform grid
   fildyn  = 'si.dyn.xml'
   fildvscf = 'dvscf'
   nq1=8, nq2=8, nq3=8,
-  !nk1=20, nk2=20, nk3=20
-  start_q=1
-  last_q=1
 /
