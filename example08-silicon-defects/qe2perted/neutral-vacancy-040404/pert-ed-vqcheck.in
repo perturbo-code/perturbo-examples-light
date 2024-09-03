@@ -1,0 +1,7 @@
+&qe2pert_ed
+  calc_mode = 'vqcheck'
+  outdir = './tmp'
+  pmcell = 'si'
+
+  fvqlist = 'qpath.dat'
+/

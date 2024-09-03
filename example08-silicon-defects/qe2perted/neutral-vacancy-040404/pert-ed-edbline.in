@@ -1,0 +1,25 @@
+&qe2pert_ed
+  calc_mode = 'edbloch_line'
+  outdir = './tmp-path'
+  pmcell = 'si'
+
+  nk1 = 8, nk2 = 8, nk3 = 8
+  dft_band_min = 1,
+  dft_band_max = 4,
+  num_wann = 4
+  lwannier = .false.
+
+  dscell_fix = 'si-u040404-neutral-vacancy-fixed'
+  dscell_rel = 'si-u040404-neutral-vacancy-relaxed'
+  pscell = 'si-u040404'
+
+  dcenter(1) = -10.86199805
+  dcenter(2) =  10.86199805
+  dcenter(3) =  10.86199805
+
+  plm_num = 1
+  gmcut = 6.0
+
+  band_min = 1
+  band_max = 4
+/

@@ -1,0 +1,30 @@
+&qe2pert_ed
+  calc_mode = 'inv_scr'
+  outdir = './tmp'
+  pmcell = 'si'
+
+  dft_band_min = 1
+  dft_band_max = 4
+  nk1 = 8, nk2 = 8, nk3 = 8
+  num_wann = 4
+  lwannier = .true.
+
+  boltz_emin = 6.0
+  boltz_emax = 6.6
+  boltz_kdim(1) = 160
+  boltz_kdim(2) = 160
+  boltz_kdim(3) = 160
+  hole = .true.
+
+  ftemper = 'si.temper'
+  epsc = 11.3
+
+  band_min = 2
+  band_max = 4
+
+  ! if consider incomplete ionization
+  ! turn on ldop
+  !ldop = .true.
+  !!VBM = 6.2286
+  !dlev = 6.2656
+/

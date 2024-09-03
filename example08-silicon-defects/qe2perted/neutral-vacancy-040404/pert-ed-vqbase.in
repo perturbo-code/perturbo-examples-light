@@ -1,0 +1,23 @@
+&qe2pert_ed
+  calc_mode = 'vqbase'
+  outdir = './tmp'
+  pmcell = 'si'
+
+  ! supercells
+  dscell_fix = 'si-u040404-neutral-vacancy-fixed'
+  dscell_rel = 'si-u040404-neutral-vacancy-relaxed'
+  pscell = 'si-u040404'
+
+  ! angstrom 
+  dcenter(1) = -10.86199805
+  dcenter(2) =  10.86199805
+  dcenter(3) =  10.86199805
+
+  ! alignment method
+  align_num = 1
+
+  qrange(1) = 6.0
+  qrange(2) = 6.0
+  qrange(3) = 6.0
+  qstep = 0.1
+/

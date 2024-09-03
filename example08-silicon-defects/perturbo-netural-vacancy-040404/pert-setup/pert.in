@@ -1,0 +1,23 @@
+&perturbo
+  prefix = 'si'
+  tmp_dir = './tmp'
+ 
+  leph = .false.
+  led = .true.
+ 
+  calc_mode = 'setup'
+ 
+  boltz_kdim(1) = 100
+  boltz_kdim(2) = 100
+  boltz_kdim(3) = 100
+ 
+  boltz_emin = 6.0
+  boltz_emax = 6.6
+  band_min = 2
+  band_max = 4
+  hole = .true.
+
+  debug = .true.
+ 
+  ftemper  = 'si.temper'
+/

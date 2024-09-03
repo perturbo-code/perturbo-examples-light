@@ -1,0 +1,31 @@
+&control
+   calculation = 'scf'
+   prefix='si'
+   pseudo_dir = '../pseudo',
+   outdir='./tmp'
+/
+&system
+   ibrav=  2,
+   celldm(1) = 10.2631,  celldm(2) =0, celldm(3) =0,
+   nat=  2
+   ntyp= 1
+   ecutwfc = 40
+   noncolin = .false.
+   lspinorb = .false.
+/
+&electrons
+   conv_thr = 1.0d-12
+   mixing_mode = 'plain'
+   mixing_beta = 0.7
+   diagonalization = 'david'
+   diago_full_acc = .true.   
+/
+ATOMIC_SPECIES
+Si 28.086 Si-PBE-Dojo-FR.upf
+
+ATOMIC_POSITIONS (angstrom)
+Si   0.00000000   0.00000000   0.00000000 
+Si  -1.35774976   1.35774976   1.35774976
+
+K_POINTS (automatic)
+  12 12 12 0 0 0

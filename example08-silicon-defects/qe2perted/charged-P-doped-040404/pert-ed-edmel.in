@@ -1,0 +1,30 @@
+&qe2pert_ed
+  calc_mode = 'edmel'
+  outdir = './tmp'
+  pmcell = 'si'
+
+  nk1 = 8, nk2 = 8, nk3 = 8
+  dft_band_min = 1,
+  dft_band_max = 4
+  num_wann = 4
+  lwannier = .true.
+
+  ! charged defect information 
+  lcube = .true.
+  lcharged = .true.
+  zcharge = 1.0
+  epsc = 11.3
+
+  ! supercells
+  dscell_fix = 'si-u040404-charged-P-fixed'
+  dscell_rel = 'si-u040404-charged-P-relaxed'
+  pscell = 'si-u040404'
+
+  ! angstrom 
+  dcenter(1) = -6.78875
+  dcenter(2) =  6.78875
+  dcenter(3) =  6.78875
+
+  plm_num = 1
+  gmcut = 6.0
+/

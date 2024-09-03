@@ -1,0 +1,13 @@
+&perturbo
+   calc_mode = 'edmat'
+   prefix = 'si'
+
+   leph = .false.
+   led = .true.
+
+   band_min = 1
+   band_max = 4
+
+   fklist = 'si_klist.kpt'
+   fqlist = 'si_kplist.kpt'
+/

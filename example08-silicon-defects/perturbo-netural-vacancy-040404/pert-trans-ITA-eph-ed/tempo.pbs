@@ -1,0 +1,28 @@
+#!/bin/sh
+#PBS -N pert-trans-ITA-eph-ed
+#PBS -j oe
+#PBS -q debugQ
+#PBS -l walltime=01:00:00
+#PBS -l nodes=1:ppn=1
+
+module purge
+module load compilers/intel/19.4
+source /usr/local/Intel/19.4/impi/2019.4.243/intel64/bin/mpivars.sh
+
+PERT=/home/ilu/Software/qe-6.5-intel/perturbo-dev/bin/perturbo.x
+
+cd $PBS_O_WORKDIR
+cp $PBS_NODEFILE ./nodes_${PBS_JOBID}
+Nodes=`cat $PBS_NODEFILE | uniq`
+
+#run jobs
+#-------------------------------------------------------------
+echo Job starts at `date`
+#-------------------------------------------------------------
+
+export OMP_NUM_THREADS=20
+mpirun -n 1 --bind-to board ${PERT} -npools 1 -i pert.in > pert.out
+
+#-------------------------------------------------------------
+echo Job ends at `date`
+#-------------------------------------------------------------

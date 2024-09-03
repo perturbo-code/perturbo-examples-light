@@ -1,0 +1,24 @@
+&qe2pert_ed
+  calc_mode = 'edmel'
+  outdir = './tmp'
+  pmcell = 'si'
+
+  nk1 = 8, nk2 = 8, nk3 = 8
+  dft_band_min = 1,
+  dft_band_max = 4,
+  num_wann = 4
+  lwannier = .true.
+
+  dscell_fix = 'si-u040404-neutral-vacancy-fixed'
+  dscell_rel = 'si-u040404-neutral-vacancy-relaxed'
+  pscell = 'si-u040404'
+
+  ! defect center: angstrom
+  dcenter(1) = -10.86199805
+  dcenter(2) =  10.86199805
+  dcenter(3) =  10.86199805
+
+  ! method to compute the plane-wave matrix
+  plm_num = 1
+  gmcut = 6.0
+/

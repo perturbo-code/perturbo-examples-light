@@ -1,0 +1,29 @@
+&qe2pert_ed
+  calc_mode = 'vqbase'
+  outdir = './tmp'
+  pmcell = 'si'
+
+  ! charged defect information 
+  lcube = .true.
+  lcharged = .true.
+  zcharge = 1.0
+  epsc = 11.3
+
+  ! supercells
+  dscell_fix = 'si-u040404-charged-P-fixed'
+  dscell_rel = 'si-u040404-charged-P-relaxed'
+  pscell = 'si-u040404'
+
+  ! angstrom 
+  dcenter(1) = -6.78875
+  dcenter(2) =  6.78875
+  dcenter(3) =  6.78875
+
+  ! alignment method
+  align_num = 1
+
+  qrange(1) = 6.0
+  qrange(2) = 6.0
+  qrange(3) = 6.0
+  qstep = 0.1
+/
