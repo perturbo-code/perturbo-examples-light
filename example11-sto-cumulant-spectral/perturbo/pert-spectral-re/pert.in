@@ -1,0 +1,16 @@
+&perturbo
+ prefix='sto'
+ calc_mode = 'spectral-re'
+
+ band_min = 1
+ band_max = 3
+
+ fklist = 'band.kpt'
+ ftemper = 'sto.temper'
+
+ phfreq_cutoff = 10.d0 
+ delta_smear = 10.d0
+
+ sampling = 'cauchy'
+ nsamples = 100000
+/

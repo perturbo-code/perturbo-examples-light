@@ -1,0 +1,25 @@
+&perturbo
+prefix='sto'
+calc_mode = 'spectral-se'
+
+!--- cumu converges para------  
+   cum_inner_emin = -0.2d0 !eV
+   cum_inner_emax =  0.2d0 !eV
+   cum_outer_emin = -0.6d0
+   cum_outer_emax =  0.6d0 
+   cum_de   =  0.4d0      !meV  
+   cum_outer_np = 4
+!------------------------------
+
+ band_min = 1
+ band_max = 3
+ fklist = 'band.kpt'
+ ftemper = 'sto.temper'
+  
+ phfreq_cutoff = 10.d0 
+ delta_smear = 10.d0
+ sampling = 'cauchy'
+ nsamples = 100000
+
+/
+

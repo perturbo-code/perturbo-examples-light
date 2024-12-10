@@ -1,0 +1,12 @@
+&perturbo
+ prefix = 'diam'
+ calc_mode = 'ephmat_spin'
+
+ fklist = 'diam_band.kpt'
+ fqlist = 'diam_band.qpt'
+
+ band_min = 9
+ band_max = 10
+
+ phfreq_cutoff = 3 !meV
+/

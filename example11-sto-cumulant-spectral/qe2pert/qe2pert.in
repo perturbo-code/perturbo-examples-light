@@ -1,0 +1,11 @@
+&qe2pert
+  prefix='sto'
+  outdir='./'
+  phdir='../pw-ph-wann/ph/save'
+  nk1=4, nk2=4, nk3=4
+  dft_band_min = 21
+  dft_band_max = 23
+  num_wann = 3
+  lwannier=.false.
+/
+

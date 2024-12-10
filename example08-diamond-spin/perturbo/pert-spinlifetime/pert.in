@@ -1,0 +1,20 @@
+&perturbo
+  prefix      = 'diam'
+  calc_mode   = 'spinlifetime'
+  
+  boltz_kdim(1) = 80
+  boltz_kdim(2) = 80
+  boltz_kdim(3) = 80
+  
+  ftemper  = 'diam.temper'
+
+  band_min = 9
+  band_max = 10
+
+  phfreq_cutoff = 3    ! meV      !Phonon frequency cutoff
+  delta_smear = 20     ! meV      !Smearing value
+
+  sampling = 'cauchy'             !Type of q-point sampling
+  cauchy_scale = 1.0
+  nsamples = 100000               !Number of q-points
+ / 

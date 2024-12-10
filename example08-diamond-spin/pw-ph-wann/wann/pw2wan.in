@@ -1,0 +1,10 @@
+&inputpp
+ outdir='./tmp'
+  prefix     =  'diam'
+  seedname   =  'diam'
+  spin_component = 'none'
+  write_amn  =  .true.
+  write_mmn  =  .true.
+  write_spn = .true.
+  write_unk  =  .false.
+/

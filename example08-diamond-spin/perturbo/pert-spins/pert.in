@@ -1,0 +1,5 @@
+&perturbo
+ prefix = 'diam'
+ calc_mode = 'spins'
+ fklist = 'diam_band.kpt'
+/

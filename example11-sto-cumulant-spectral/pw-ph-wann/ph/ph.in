@@ -1,0 +1,14 @@
+&inputph
+  tr2_ph=1.0d-16
+  prefix='sto'
+  recover = .true.
+  ldisp=.true.
+  epsil=.true.
+  lqdir = .true.
+  outdir='./tmp'
+  fildyn  = 'sto.dyn.xml'
+  fildvscf = 'dvscf'
+  nq1=2, nq2=2, nq3=2,
+  nk1=8, nk2=8, nk3=8, 
+/
+
