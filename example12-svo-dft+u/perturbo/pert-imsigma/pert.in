@@ -1,0 +1,15 @@
+&perturbo
+calc_mode = 'imsigma'
+prefix = 'svo'
+fklist = 'svo_tet.kpt'
+ftemper = 'svo.temper'
+
+debug = .true.
+
+delta_smear = 10.0
+phfreq_cutoff = 1.0
+
+sampling = 'uniform'
+nsamples = 100000
+/
+

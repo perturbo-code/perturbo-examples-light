@@ -1,0 +1,13 @@
+&perturbo
+prefix = 'svo'
+calc_mode = 'setup'
+
+boltz_kdim(1) = 100
+boltz_kdim(2) = 100
+boltz_kdim(3) = 100
+
+boltz_emin = 12.3
+boltz_emax = 12.65
+
+ftemper = 'svo.temper'
+/

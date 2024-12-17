@@ -2,6 +2,8 @@
   prefix      = 'gaas'
   calc_mode   = 'setup'
   hole = .true.
+
+  find_efermi = .true.
   
   boltz_kdim(1) = 160
   boltz_kdim(2) = 160

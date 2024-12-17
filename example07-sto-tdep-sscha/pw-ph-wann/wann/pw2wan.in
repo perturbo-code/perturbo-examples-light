@@ -1,0 +1,10 @@
+&inputpp
+  outdir='./tmp/'
+  prefix = 'sto-nosoc'
+  seedname = 'sto-nosoc'
+  spin_component = 'none'
+  write_mmn = .true.
+  write_amn = .true.
+  write_unk = .false.
+  write_spn = .true.
+/

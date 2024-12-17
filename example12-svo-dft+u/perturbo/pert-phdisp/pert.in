@@ -1,0 +1,6 @@
+&perturbo
+  prefix = 'svo'
+  calc_mode = 'phdisp'
+  fqlist = 'svo_phdisp.qpt'
+ /
+

@@ -1,0 +1,22 @@
+
+   Program PERTURBO starts on  8Nov2023 at 10:51: 9 
+
+     Parallel version (MPI & OpenMP), running on      64 processor cores
+     Number of MPI processes:                 1
+     Threads/MPI process:                    64
+
+     MPI processes distributed on     1 nodes
+
+     calc_mode = 'ephmat'
+     --------------------------------------------------
+     The Fe_epr.h5 HDF5 file was found and will be used in the calculation.
+
+     band_min:    1  band_max:    4
+     Reading list from file: eph.qpt
+     Reading list from file: eph.kpt
+ 
+     PERTURBO     :     10.39s CPU      0.38s WALL
+
+     init_eph_wan :      8.19s CPU      0.24s WALL (       1 calls)
+
+   Program was terminated on:  10:51:10   8Nov2023             

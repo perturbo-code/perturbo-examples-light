@@ -1,0 +1,79 @@
+
+   Program QE2PERT starts on  8Nov2023 at 10:10:55 
+
+     Parallel version (MPI & OpenMP), running on      64 processor cores
+     Number of MPI processes:                 1
+     Threads/MPI process:                    64
+
+     MPI processes distributed on     1 nodes
+
+
+     Reading xml data from directory:
+
+     ./tmp/Fe.save/
+     WARNING: atomic wfc #  5 for atom typeFe has zero norm
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+ 
+     G-vector sticks info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Sum        1335     797    303                30669    14171    3319
+ 
+     Using Slab Decomposition
+ 
+
+     QE2PERT  
+     ---------------------------
+     Spin polarized: spin-up
+     NC pseudopotentials
+     ---------------------------
+
+
+     reading grid info from file ../pw-ph-wann/phonon/save/Fe.dyn0
+  reading force constants from file ../pw-ph-wann/phonon/save/Fe.dyn1.xml
+  nqs=            1
+ q=   0.00000000  0.00000000  0.00000000
+  reading force constants from file ../pw-ph-wann/phonon/save/Fe.dyn2.xml
+  nqs=            6
+ q=   0.00000000  0.50000000 -0.50000000
+ q=  -0.50000000 -0.50000000  0.00000000
+ q=   0.50000000 -0.50000000  0.00000000
+ q=   0.00000000  0.50000000  0.50000000
+ q=  -0.50000000  0.00000000  0.50000000
+ q=  -0.50000000  0.00000000 -0.50000000
+  reading force constants from file ../pw-ph-wann/phonon/save/Fe.dyn3.xml
+  nqs=            1
+ q=   0.00000000  0.00000000 -1.00000000
+
+      q-space grid ok, #points =    8
+     Symmetries of bravais lattice:  48
+     Symmetries of crystal:          48
+ end lattice
+Norm of the difference between old and new effective charges:    0.00000000000000000000
+Norm of the difference between old and new force-constants:   0.00026435073664131403
+     saved electron and phonon data to file.
+start elph_matrix:
+irreducible q:   1    0.00000000  0.00000000  0.00000000
+  progress:   12.50%
+irreducible q:   2    0.00000000  0.50000000 -0.50000000
+  progress:   25.00%
+  progress:   37.50%
+  progress:   50.00%
+  progress:   62.50%
+  progress:   75.00%
+  progress:   87.50%
+irreducible q:   3    0.00000000  0.00000000 -1.00000000
+  progress:  100.00%
+     collecting electron-phonon matrix...
+     computing electron-phonon matrix in wannier basis...
+ 
+     QE2PERT      :   7m 3.43s CPU      8.92s WALL
+
+
+   Program was terminated on:  10:11: 4   8Nov2023             

@@ -1,0 +1,16 @@
+&perturbo
+ prefix      = 'diam'
+ calc_mode   = 'setup'
+
+ boltz_kdim(1) = 80   !kgrid along three crystal axes
+ boltz_kdim(2) = 80
+ boltz_kdim(3) = 80
+
+ boltz_emin = 17.3  !Energy window
+ boltz_emax = 17.7  !Energy window
+ band_min = 9      !Band index 
+ band_max = 10
+
+ find_efermi = .true.
+ ftemper  = 'diam.temper' !Name of .temper file
+/

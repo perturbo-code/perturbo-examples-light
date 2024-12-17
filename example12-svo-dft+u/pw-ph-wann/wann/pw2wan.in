@@ -1,0 +1,10 @@
+&inputpp
+  outdir = './tmp/'
+  prefix = 'svo'
+  seedname = 'svo'
+  spin_component = 'none'
+  write_spn = .true.
+  write_mmn = .true.
+  write_amn = .true.
+  !write_unk = .true. 
+/

@@ -1,0 +1,6 @@
+&perturbo
+  prefix      = 'svo'
+  calc_mode   = 'ephmat'
+  fklist   = 'svo_eph.kpt'
+  fqlist  = 'svo_eph.qpt'
+ /

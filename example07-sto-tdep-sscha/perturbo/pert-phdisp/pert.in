@@ -1,0 +1,5 @@
+&perturbo
+  prefix      = 'sto-nosoc'
+  calc_mode   = 'phdisp'
+  fqlist   = 'sto_phdisp.qpt'
+ /

@@ -1,0 +1,48 @@
+&perturbo
+  prefix      = 'gaas'
+
+  calc_mode   = 'dynamics-run'
+
+  yaml_fname  = 'gaas_dyna_init.yml'
+
+  boltz_kdim(1) = 120 
+  boltz_kdim(2) = 120 
+  boltz_kdim(3) = 120 
+
+  !!by default, q-grid is the same as k-grid
+  !! a different q-grid is allowed if q- and k- is commensurate
+  boltz_qdim(1) = 40 
+  boltz_qdim(2) = 40 
+  boltz_qdim(3) = 40 
+
+  ! band- and energy- windows
+  boltz_emin         = 5.9         ! eV
+  boltz_emax         = 6.7         ! eV
+  band_min = 5
+  band_max = 5
+
+  ! carrier dynamics
+  time_step = 1  ! femto-second
+  boltz_nstep = 1
+  output_nstep = 1
+  solver = 'euler' ! default is Euler
+
+  ! initial excitation (is irrelevant since it will be modified later)
+  boltz_init_dist = 'gaussian'
+  boltz_init_e0 = 6.4  ! eV
+  boltz_init_smear = 40 ! meV
+  boltz_init_ampl = 0
+
+  boltz_de = 1
+
+  ftemper  = 'gaas.temper'
+
+  tmp_dir = "./tmp"
+  load_scatter_eph = .false.
+
+  !phonon energy cutoff
+  phfreq_cutoff = 1 ! meV
+
+  !smear parameter for delta function
+  delta_smear = 8 ! meV
+/

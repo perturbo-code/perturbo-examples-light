@@ -1,0 +1,68 @@
+---
+program: qe2pert
+
+start date and time:
+   date:  8 November 2023
+   time: "10:12:36"
+
+parallelization:
+   type: MPI+OpenMP
+   number of MPI tasks:   1
+   number of OpenMP threads:  64
+   number of nodes:   1
+
+input parameters:
+   before conversion:
+      asr:          crystal
+      debug:          False
+      dft_band_max:                  14
+      dft_band_min:                   1
+      dis_win_min:          -9.9990000000000000E+03
+      eig_corr:          
+      load_ephmat:          False
+      lwannier:          True 
+      nk1:                   8
+      nk2:                   8
+      nk3:                   8
+      num_wann:                   9
+      outdir:          ./tmp
+      phdir:          ../pw-ph-wann/phonon/save
+      polar_alpha:           1.0000000000000000E+00
+      prefix:          Fe
+      spin_component:          down
+      system_2d:          False
+      tdep:          False
+      thickness_2d:           6.0000000000000000E+00
+      yaml_fname:          qe2pert_output.yml
+   after conversion:
+      asr:          crystal
+      debug:          False
+      dft_band_max:                  14
+      dft_band_min:                   1
+      dis_win_min:          -7.3491294486874756E+02
+      eig_corr:          
+      load_ephmat:          False
+      lwannier:          True 
+      nk1:                   8
+      nk2:                   8
+      nk3:                   8
+      num_wann:                   9
+      outdir:          ./tmp/
+      phdir:          ../pw-ph-wann/phonon/save/
+      polar_alpha:           1.0000000000000000E+00
+      prefix:          Fe
+      spin_component:          down
+      system_2d:          False
+      tdep:          False
+      thickness_2d:          -6.0000000000000000E+00
+      yaml_fname:          qe2pert_output.yml
+
+timings:
+
+   time units: s
+
+   QE2PERT:
+      cpu:       415.43870800
+      wall:        8.08544612
+      calls:         2
+...

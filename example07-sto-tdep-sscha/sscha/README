@@ -1,0 +1,19 @@
+Steps:
+
+1. create folder phonon-not-xml, contains prefix.dyn{i}, DFPT results but with conventional QE file format
+
+1. Run the following scripts
+
+	1-sscha-generate.py  
+	2.1-config-submit-gpu-nersc.slurm
+	2.2-config-submit-gpu-nersc.slurm
+    3-sscha-collect.py
+    4-sscha-minimize.py
+
+2. Create a new "phonon" folder but with sscha xml files
+   5-new-phonon-folder.sh
+
+3. In qe2pert.x calculations, link phdir to the current "phonon/save" directory instead
+
+
+Note: some of the outputs are omitted in this folder. This folder is just an example.

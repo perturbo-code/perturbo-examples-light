@@ -1,0 +1,19 @@
+&inputph
+  verbosity='debug'
+  tr2_ph=1.0d-15
+  alpha_mix(1) = 0.5
+  nmix_ph = 12
+  niter_ph = 200
+  prefix='svo'
+  ldisp=.true.
+  epsil=.false.
+  search_sym = .false.
+  lqdir = .true.
+  outdir='./tmp/'
+  fildyn  = 'svo.dyn.xml'
+  fildvscf = 'dvscf'
+  nq1=4, nq2=4, nq3=4,
+  nk1=12, nk2=12, nk3=12
+  start_q=1
+  last_q=1
+/

@@ -1,0 +1,5 @@
+&perturbo
+  prefix      = 'svo'
+  calc_mode   = 'bands'
+  fklist   = 'svo_band.kpt'
+ /

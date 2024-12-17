@@ -1,0 +1,54 @@
+&perturbo
+  prefix      = 'gaas'
+  hole        = .true.
+
+  calc_mode   = 'dynamics-run'
+
+  boltz_kdim(1) = 120 
+  boltz_kdim(2) = 120 
+  boltz_kdim(3) = 120 
+
+  !!by default, q-grid is the same as k-grid
+  !! a different q-grid is allowed if q- and k- is commensurate
+  boltz_qdim(1) = 40 
+  boltz_qdim(2) = 40 
+  boltz_qdim(3) = 40 
+
+  ! band- and energy- windows
+  boltz_emin         = 5.05         ! eV
+  boltz_emax         = 5.3       ! eV
+  band_min = 2
+  band_max = 4
+
+  ! carrier dynamics
+  time_step = 1  ! femto-second
+  boltz_nstep = 500
+  output_nstep = 10
+  solver = 'euler' ! default is Euler
+
+  ! initial excitation (is irrelevant since it will be modified later)
+  boltz_init_dist = 'gaussian'
+  boltz_init_e0 = 5.0  ! eV
+  boltz_init_smear = 40 ! meV
+  boltz_init_ampl = 0
+
+  ! pump pulse
+  pump_pulse = .true.
+  pump_pulse_fname = 'pump_pulse_hole_Epump_01.50.h5'
+
+  boltz_de = 1
+
+  ftemper  = 'gaas.temper'
+
+  tmp_dir = "./tmp"
+  !!by default, this is false,
+  ! set it to true if restart an itertaive calculation, it will reuse g stored in tmp_dir
+  !load_scatter_eph = .false.
+  load_scatter_eph = .true.
+
+  !phonon energy cutoff
+  phfreq_cutoff = 1 ! meV
+
+  !smear parameter for delta function
+  delta_smear = 8 ! meV
+/

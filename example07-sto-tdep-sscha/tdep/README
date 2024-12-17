@@ -1,0 +1,21 @@
+Steps to run TDEP calculations with scripts: 
+
+1. Change the directories in collect.sh and submit.sh to where the folder is
+
+2. Create supercell (in this example it is 4*4*4, diagonal) 
+   Generate canonical configurations using -of 1 (outputs are in VASP format, named contcar_conf000X)
+
+3. Run contcar_to_qe.py to convert to qe_conf000X suitable for QE inputs. You can also convert the files yourself.
+
+4. Create scf0 folder, move qe_conf000X to scf0.
+   Copy scripts submit.sh submit.slurm and collect.sh into scf0.
+
+5. Run submit.sh to create qe_conf000X.in based on scf_ref.in, as scf.in input files, and job submission scirpts based on submit.slurm
+
+6. Run collect.sh after all jobs are done to collect infile forces and positions
+
+7. Come back to the main page, create infile.meta, infile.stat, infile.lotosplitting (tutorials for creating lotosplitting from QE/ph.out can be found on TDEP official webiste)
+
+8. Run extract_forceconstant and phonon_dispersion_relation
+
+9. Repeat the above loop for scf1, scf2, ...

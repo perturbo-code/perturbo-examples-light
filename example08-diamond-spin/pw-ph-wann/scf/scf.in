@@ -15,9 +15,6 @@
  ecutwfc = 120.0
  noncolin = .true.
  lspinorb = .true.
- !nr1 = 32
- !nr2 = 32
- !nr3 = 32
 /
 &electrons
   conv_thr = 1.0d-25
